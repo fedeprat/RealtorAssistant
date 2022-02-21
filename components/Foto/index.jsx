@@ -3,9 +3,8 @@ import * as ImagePicker from "expo-image-picker";
 import { useEffect, useState } from "react";
 import { connect } from "react-redux";
 import { addImage } from "../../redux/actions";
-import { store } from "../../redux/store";
 
-const Foto = ({ estilos, name, addImage, estado }) => {
+const Foto = ({ estilos, name, addImage }) => {
   const [hasPermission, setHaspermission] = useState(null);
 
   useEffect(() => {
@@ -16,16 +15,12 @@ const Foto = ({ estilos, name, addImage, estado }) => {
     })();
   }, []);
 
-  store.subscribe(() => {
-    console.log(store.getState());
-  });
-
   const pickImage = async (e, hola) => {
     e.preventDefault()
     let result = await ImagePicker.launchImageLibraryAsync({
       mediaTypes: ImagePicker.MediaTypeOptions.Images,
       allowsEditing: true,
-      aspect: [9, 10],
+      aspect: [16, 9],
       allowsMultipleSelection: false
     });
     if (!result.cancelled) {
@@ -40,9 +35,7 @@ const Foto = ({ estilos, name, addImage, estado }) => {
     <View style={estilos}>
       <Button
         title="Subir Foto"
-        name={name}
         onPress={(e) => {
-          console.log(name)
           pickImage(e, name);
         }}
       />
