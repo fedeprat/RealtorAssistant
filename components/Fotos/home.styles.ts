@@ -1,11 +1,12 @@
 import { StyleSheet } from "react-native";
 import { Dimensions } from "react-native";
+import { estilosIcono } from "../iconos/iconos.styles";
 
 const { width, height } = Dimensions.get("screen");
 // -------- valores importantes --------------- //
 const valores = {
   fotosEsquina: {
-    anchoFoto: width * 0.5, // ancho de las fotos de las esquinas
+    anchoFoto: width * 0.49, // ancho de las fotos de las esquinas
     altoFoto: width * 0.5 * 0.77, // alto de las fotos de las esquinas
     top: height * 0.18, //top de las fotos de las esquinas
     bottom: height * 0.06, //bottom de las fotos de las esquinas
@@ -27,6 +28,7 @@ export const styles = StyleSheet.create({
     height: "100%",
     backgroundColor: "white",
     position: "relative",
+    justifyContent: 'space-between',
   },
   header: {
     width: "100%",
@@ -38,10 +40,7 @@ export const styles = StyleSheet.create({
   },
   medio: {
     width: "100%",
-    height: 72,
-    backgroundColor: "white",
-    position: "absolute",
-    top: "47%",
+    height: '10%',
     borderWidth: 2,
     borderColor: "white",
     display: "flex",
@@ -53,53 +52,44 @@ export const styles = StyleSheet.create({
     width: valores.fotosEsquina.anchoFoto,
     height: valores.fotosEsquina.altoFoto,
     backgroundColor: "white",
-    position: "absolute",
-    top: valores.fotosEsquina.top,
-    right: 0,
     display: "flex",
     justifyContent: "center",
     alignItems: "center",
     borderRadius: valores.valoresGenerales.curvatura,
     borderWidth: 2,
     borderColor: valores.valoresGenerales.borde,
-    resizeMode: valores.valoresGenerales.resizeMode,
   },
   container2: {
     width: valores.fotosEsquina.anchoFoto,
     height: valores.fotosEsquina.altoFoto,
     backgroundColor: "white",
-    position: "absolute",
-    top: valores.fotosEsquina.top,
     display: "flex",
     justifyContent: "center",
     alignItems: "center",
     borderRadius: valores.valoresGenerales.curvatura,
     borderWidth: 2,
     borderColor: valores.valoresGenerales.borde,
-    resizeMode: valores.valoresGenerales.resizeMode,
   },
   container3: {
+    position: 'absolute',
+    bottom: - valores.fotosMedio.altoFotoMedio / 3.3,
     width: valores.fotosMedio.anchoFotoMedio,
     height: valores.fotosMedio.altoFotoMedio,
-    position: "absolute",
     backgroundColor: "white",
-    top: height * 0.22,
-    right: width * 0.33,
-    zIndex: 100,
     display: "flex",
     justifyContent: "center",
     alignItems: "center",
     borderRadius: valores.valoresGenerales.curvatura,
     borderWidth: 2,
     borderColor: valores.valoresGenerales.borde,
-    resizeMode: valores.valoresGenerales.resizeMode,
   },
   container4: {
+    position: 'absolute',
+    right: (width/2) - (valores.fotosMedio.anchoFotoMedio / 2),
+    top: - valores.fotosMedio.altoFotoMedio/ 2.5,
+
     width: valores.fotosMedio.anchoFotoMedio,
     height: valores.fotosMedio.altoFotoMedio,
-    position: "absolute",
-    bottom: height * 0.2,
-    right: width * 0.33,
     zIndex: 100,
     backgroundColor: "white",
     display: "flex",
@@ -108,14 +98,10 @@ export const styles = StyleSheet.create({
     borderRadius: valores.valoresGenerales.curvatura,
     borderWidth: 2,
     borderColor: valores.valoresGenerales.borde,
-    resizeMode: valores.valoresGenerales.resizeMode,
   },
   container5: {
     width: valores.fotosEsquina.anchoFoto,
     height: valores.fotosEsquina.altoFoto,
-    position: "absolute",
-    bottom: valores.fotosEsquina.bottom,
-    right: 0,
     marginBottom: 80,
     backgroundColor: "white",
     display: "flex",
@@ -124,13 +110,10 @@ export const styles = StyleSheet.create({
     borderRadius: valores.valoresGenerales.curvatura,
     borderWidth: 2,
     borderColor: valores.valoresGenerales.borde,
-    resizeMode: valores.valoresGenerales.resizeMode,
   },
   container6: {
     width: valores.fotosEsquina.anchoFoto,
     height: valores.fotosEsquina.altoFoto,
-    position: "absolute",
-    bottom: valores.fotosEsquina.bottom,
     marginBottom: 80,
     backgroundColor: "white",
     display: "flex",
@@ -139,13 +122,10 @@ export const styles = StyleSheet.create({
     borderRadius: valores.valoresGenerales.curvatura,
     borderWidth: 1,
     borderColor: valores.valoresGenerales.borde,
-    resizeMode: valores.valoresGenerales.resizeMode,
   },
   footer: {
     width: "100%",
     height: 78,
-    position: "absolute",
-    bottom: 0,
     backgroundColor: "grey",
   },
   logoIvan: {
@@ -165,20 +145,15 @@ export const styles = StyleSheet.create({
   images: {
     width: "100%",
     height: "100%",
-    resizeMode: "cover",
+    resizeMode: valores.valoresGenerales.resizeMode,
     borderRadius: 10,
   },
   estiloView: {
-    position: "absolute",
     justifyContent: "center",
     alignItems: "center",
     borderRadius: 5,
-    top: "42%",
-    left: "31%",
-    zIndex: 1000,
-    width: 150,
-    height: 30,
     backgroundColor: "grey",
+    padding: 5,
   },
   estiloTexto: {
     color: "white",

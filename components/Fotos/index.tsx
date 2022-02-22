@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { View, TouchableOpacity, Image } from "react-native";
+import { View, TouchableOpacity, Image, SafeAreaView } from "react-native";
 import { styles } from "./home.styles";
 import bañera from "../iconos/bañera.png";
 import superficieTotal from "../iconos/casa-terreno.png";
@@ -43,7 +43,7 @@ interface HOME {
   };
 }
 interface STATE {
-  precio: {precio: string}
+  precio: { precio: string };
 }
 
 const Home = ({ estado, icono }: HOME) => {
@@ -51,7 +51,14 @@ const Home = ({ estado, icono }: HOME) => {
   const [visible, setVisible] = useState(false); // estado para mostrar modal precio
   const precio = useSelector((state: STATE) => state.precio);
   return (
-    <View style={styles.containerPadre}>
+    <SafeAreaView style={styles.containerPadre}>
+      <Header estilos={styles.header} />
+      <Precio
+        precio={precio.precio}
+        estiloTexto={styles.estiloTexto}
+        estiloView={styles.estiloView}
+        setVisible={setVisible}
+      />
       <ModalFoto
         visibleFoto={visible}
         setVisibleFoto={setVisible}
@@ -62,43 +69,41 @@ const Home = ({ estado, icono }: HOME) => {
         setVisible={setIconitosVisible}
         checked={icono}
       />
-      <Header estilos={styles.header} />
 
-      <View> 
-      {estado.foto1 ? ( // si hay una foto cargada renderiza la foto, sino el boton para cargar una
-        <TouchableImagen
-          estilo={styles.container1}
-          estado={estado.foto1}
-          name={"foto1"}
-        />
-      ) : (
-        <Foto estilos={styles.container1} name={"foto1"} />
-      )}
-      {estado.foto2 ? ( // si hay una foto cargada renderiza la foto, sino el boton para cargar una
-        <TouchableImagen
-          estilo={styles.container2}
-          estado={estado.foto2}
-          name={"foto2"}
-        />
-      ) : (
-        <Foto estilos={styles.container2} name={"foto2"} />
-      )}
-      {estado.foto3 ? ( // si hay una foto cargada renderiza la foto, sino el boton para cargar una
-        <TouchableImagen
-          estilo={styles.container3}
-          estado={estado.foto3}
-          name={"foto3"}
-        />
-      ) : (
-        <Foto estilos={styles.container3} name={"foto3"} />
-      )}
+      <View          //aaaaaaaqui
+        style={{
+          flexDirection: "row",
+          justifyContent: "center",
+        }}
+      >
+        {estado.foto1 ? ( // si hay una foto cargada renderiza la foto, sino el boton para cargar una
+          <TouchableImagen
+            estilo={styles.container1}
+            estado={estado.foto1}
+            name={"foto1"}
+          />
+        ) : (
+          <Foto estilos={styles.container1} name={"foto1"} />
+        )}
+        {estado.foto2 ? ( // si hay una foto cargada renderiza la foto, sino el boton para cargar una
+          <TouchableImagen
+            estilo={styles.container2}
+            estado={estado.foto2}
+            name={"foto2"}
+          />
+        ) : (
+          <Foto estilos={styles.container2} name={"foto2"} />
+        )}
+        {estado.foto3 ? ( // si hay una foto cargada renderiza la foto, sino el boton para cargar una
+          <TouchableImagen
+            estilo={styles.container3}
+            estado={estado.foto3}
+            name={"foto3"}
+          />
+        ) : (
+          <Foto estilos={styles.container3} name={"foto3"} />
+        )}
       </View>
-      <Precio
-        precio={precio.precio}
-        estiloTexto={styles.estiloTexto}
-        estiloView={styles.estiloView}
-        setVisible={setVisible}
-      />
 
       <TouchableOpacity /* el medio */
         style={styles.medio}
@@ -160,40 +165,47 @@ const Home = ({ estado, icono }: HOME) => {
         ) : null}
       </TouchableOpacity>
 
-      {estado.foto4 ? ( // si hay una foto cargada renderiza la foto, sino el boton para cargar una
-        <TouchableImagen
-          estilo={styles.container4}
-          estado={estado.foto4}
-          name={"foto4"}
-        />
-      ) : (
-        <Foto estilos={styles.container4} name={"foto4"} />
-      )}
-      {estado.foto5 ? ( // si hay una foto cargada renderiza la foto, sino el boton para cargar una
-        <TouchableImagen
-          estilo={styles.container5}
-          estado={estado.foto5}
-          name={"foto5"}
-        />
-      ) : (
-        <Foto estilos={styles.container5} name={"foto5"} />
-      )}
-      {estado.foto6 ? ( // si hay una foto cargada renderiza la foto, sino el boton para cargar una
-        <TouchableImagen
-          estilo={styles.container6}
-          estado={estado.foto6}
-          name={"foto6"}
-        />
-      ) : (
-        <Foto estilos={styles.container6} name={"foto6"} />
-      )}
-
+      <View    // aaaaaaaaaaaaqui
+        style={{
+          flexDirection: "row",
+          height: "20%",
+          justifyContent: "center",
+        }}
+      >
+        {estado.foto4 ? ( // si hay una foto cargada renderiza la foto, sino el boton para cargar una
+          <TouchableImagen
+            estilo={styles.container4}
+            estado={estado.foto4}
+            name={"foto4"}
+          />
+        ) : (
+          <Foto estilos={styles.container4} name={"foto4"} />
+        )}
+        {estado.foto5 ? ( // si hay una foto cargada renderiza la foto, sino el boton para cargar una
+          <TouchableImagen
+            estilo={styles.container5}
+            estado={estado.foto5}
+            name={"foto5"}
+          />
+        ) : (
+          <Foto estilos={styles.container5} name={"foto5"} />
+        )}
+        {estado.foto6 ? ( // si hay una foto cargada renderiza la foto, sino el boton para cargar una
+          <TouchableImagen
+            estilo={styles.container6}
+            estado={estado.foto6}
+            name={"foto6"}
+          />
+        ) : (
+          <Foto estilos={styles.container6} name={"foto6"} />
+        )}
+      </View>
       <Footer
         estilosPrincipal={styles.footer}
         estiloIvanLogo={styles.logoIvan}
         estiloCologo={styles.cologo}
       />
-    </View>
+    </SafeAreaView>
   );
 };
 

@@ -20,7 +20,7 @@ const Foto = ({ estilos, name, addImage }) => {
     let result = await ImagePicker.launchImageLibraryAsync({
       mediaTypes: ImagePicker.MediaTypeOptions.Images,
       allowsEditing: true,
-      aspect: [16, 9],
+      //aspect: [16, 9],
       allowsMultipleSelection: false
     });
     if (!result.cancelled) {

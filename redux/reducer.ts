@@ -87,7 +87,7 @@ const initialState = {
     subtitulo: "SUBTITULO",
     fontSize: 30,
     position: {
-      right: 135,
+      right: 110,
       top: 32,
     },
   },
