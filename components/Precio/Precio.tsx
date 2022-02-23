@@ -1,5 +1,4 @@
 import { Text, TouchableOpacity } from "react-native";
-import { cambiarPrecio } from "../../redux/actions";
 
 interface PRECIO {
   precio: {};

@@ -3,6 +3,7 @@ import { StyleSheet, View } from "react-native";
 import Home from "./components/Fotos";
 import { Provider as ReduxProvider } from "react-redux";
 import { store } from "./redux/store";
+import { useEffect } from "react";
 
 
 export default function App() {
@@ -10,7 +11,7 @@ export default function App() {
     <ReduxProvider store={store}>
 
         <View style={styles.container}>
-          <StatusBar style="auto" />
+          <StatusBar hidden style="auto" />
           <Home />
         </View>
 

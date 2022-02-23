@@ -112,54 +112,54 @@ const Home = ({ estado, icono }: HOME) => {
         {icono.icono1 ? ( // si el estado del icono es true renderiza el icono sino queda oculto
           <Fotito
             foto={superficieTotal}
-            styles={estilosTexto.superficieTotal}
-            estiloIcono={estilosIcono.superficieTotal}
-            estiloContainer={estiloContainer.superficieTotal}
+            styles={estilosTexto.texto}
+            estiloIcono={estilosIcono.iconos}
+            estiloContainer={estiloContainer.container}
             numero={"descripcion1"}
           />
         ) : null}
         {icono.icono2 ? ( // si el estado del icono es true renderiza el icono sino queda oculto
           <Fotito
             foto={superficieInterior}
-            styles={estilosTexto.superficieInterior}
-            estiloIcono={estilosIcono.superficieInterior}
-            estiloContainer={estiloContainer.superficieInterior}
+            styles={estilosTexto.texto}
+            estiloIcono={estilosIcono.iconos}
+            estiloContainer={estiloContainer.container}
             numero={"descripcion2"}
           />
         ) : null}
         {icono.icono3 ? ( // si el estado del icono es true renderiza el icono sino queda oculto
           <Fotito
             foto={bañera}
-            styles={estilosTexto.bañera}
-            estiloIcono={estilosIcono.bañera}
-            estiloContainer={estiloContainer.bañera}
+            styles={estilosTexto.texto}
+            estiloIcono={estilosIcono.iconos}
+            estiloContainer={estiloContainer.container}
             numero={"descripcion3"}
           />
         ) : null}
         {icono.icono4 ? ( // si el estado del icono es true renderiza el icono sino queda oculto
           <Fotito
             foto={inodoro}
-            styles={estilosTexto.inodoro}
-            estiloIcono={estilosIcono.inodoro}
-            estiloContainer={estiloContainer.inodoro}
+            styles={estilosTexto.texto}
+            estiloIcono={estilosIcono.iconos}
+            estiloContainer={estiloContainer.container}
             numero={"descripcion4"}
           />
         ) : null}
         {icono.icono5 ? ( // si el estado del icono es true renderiza el icono sino queda oculto
           <Fotito
             foto={dormitorio}
-            styles={estilosTexto.habitacion}
-            estiloIcono={estilosIcono.dormitorio}
-            estiloContainer={estiloContainer.dormitorio}
+            styles={estilosTexto.texto}
+            estiloIcono={estilosIcono.iconos}
+            estiloContainer={estiloContainer.container}
             numero={"descripcion5"}
           />
         ) : null}
         {icono.icono6 ? ( // si el estado del icono es true renderiza el icono sino queda oculto
           <Fotito
             foto={garage}
-            styles={estilosTexto.garage}
-            estiloIcono={estilosIcono.garage}
-            estiloContainer={estiloContainer.garage}
+            styles={estilosTexto.texto}
+            estiloIcono={estilosIcono.iconos}
+            estiloContainer={estiloContainer.container}
             numero={"descripcion6"}
           />
         ) : null}

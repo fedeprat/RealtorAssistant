@@ -13,7 +13,7 @@ const valores = {
   },
   fotosMedio: {
     anchoFotoMedio: width * 0.35, // ancho de las 2 fotos interiores
-    altoFotoMedio: height * 0.1
+    altoFotoMedio: height * 0.12
   },
   valoresGenerales: {
     borde: "rgb(230, 230, 230)", // color del borde de las fotos
@@ -33,7 +33,7 @@ export const styles = StyleSheet.create({
   header: {
     width: "100%",
     height: "10%",
-    backgroundColor: "grey",
+    backgroundColor: "rgb(80, 80, 80)",
     display: "flex",
     marginTop: 30,
     alignItems: "center",
@@ -43,10 +43,8 @@ export const styles = StyleSheet.create({
     height: '10%',
     borderWidth: 2,
     borderColor: "white",
-    display: "flex",
     flexDirection: "row",
     justifyContent: "space-around",
-    alignItems: "flex-end",
   },
   container1: {
     width: valores.fotosEsquina.anchoFoto,
@@ -72,7 +70,7 @@ export const styles = StyleSheet.create({
   },
   container3: {
     position: 'absolute',
-    bottom: - valores.fotosMedio.altoFotoMedio / 3.3,
+    bottom: - valores.fotosMedio.altoFotoMedio / 3.9,
     width: valores.fotosMedio.anchoFotoMedio,
     height: valores.fotosMedio.altoFotoMedio,
     backgroundColor: "white",
@@ -86,8 +84,7 @@ export const styles = StyleSheet.create({
   container4: {
     position: 'absolute',
     right: (width/2) - (valores.fotosMedio.anchoFotoMedio / 2),
-    top: - valores.fotosMedio.altoFotoMedio/ 2.5,
-
+    top: - valores.fotosMedio.altoFotoMedio/ 3.9,
     width: valores.fotosMedio.anchoFotoMedio,
     height: valores.fotosMedio.altoFotoMedio,
     zIndex: 100,
@@ -126,7 +123,7 @@ export const styles = StyleSheet.create({
   footer: {
     width: "100%",
     height: 78,
-    backgroundColor: "grey",
+    backgroundColor: "rgb(80, 80, 80)",
   },
   logoIvan: {
     width: 210,
@@ -152,7 +149,7 @@ export const styles = StyleSheet.create({
     justifyContent: "center",
     alignItems: "center",
     borderRadius: 5,
-    backgroundColor: "grey",
+    backgroundColor: "rgb(80, 80, 80)",
     padding: 5,
   },
   estiloTexto: {

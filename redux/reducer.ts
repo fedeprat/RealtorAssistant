@@ -80,7 +80,7 @@ const initialState = {
     fontSize: 35,
     position: {
       right: 135,
-      top: 0,
+      top: -8,
     },
   },
   subtitulo: {
@@ -88,7 +88,7 @@ const initialState = {
     fontSize: 30,
     position: {
       right: 110,
-      top: 32,
+      top: 27,
     },
   },
   precio: {
