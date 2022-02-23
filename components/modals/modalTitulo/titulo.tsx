@@ -1,4 +1,4 @@
-import { Modal, View, Text, ScrollView } from "react-native";
+import { Modal, View, Text, ScrollView, KeyboardAvoidingView } from "react-native";
 import { styles } from "./titulo.styles";
 import { ACTIONS } from "../../../redux/actions";
 import {
@@ -10,6 +10,7 @@ import {
 import { connect } from "react-redux";
 import { Input, Button, Divider } from "react-native-elements";
 import BotonTextoBoton from "./botonTextoBoton";
+import React from "react";
 
 interface MODALTITULO {
   visible: boolean;
@@ -52,7 +53,7 @@ const ModalTitulo = ({
       transparent={true}
       statusBarTranslucent={true}
     >
-      <View style={styles.viewBackground}>
+      <KeyboardAvoidingView behavior="height" style={styles.viewBackground}>
         <ScrollView style={styles.textModal}>
           <View>
             <View style={{ margin: 30 }}>
@@ -157,7 +158,7 @@ const ModalTitulo = ({
             {/* ---------------------------------------------------------------------------- */}
           </View>
         </ScrollView>
-      </View>
+      </KeyboardAvoidingView>
     </Modal>
   );
 };

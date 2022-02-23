@@ -49,10 +49,4 @@ function mapDispatchToProps(dispatch) {
   };
 }
 
-function mapStateToProps(state) {
-  return {
-    estado: state.fotos,
-  };
-}
-
-export default connect(mapStateToProps, mapDispatchToProps)(Foto);
+export default connect(null, mapDispatchToProps)(Foto);

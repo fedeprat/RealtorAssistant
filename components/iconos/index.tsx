@@ -1,6 +1,6 @@
 import React from "react";
 import { View, Image, ImageSourcePropType, Text } from "react-native";
-import { connect } from "react-redux";
+import { connect, useSelector } from "react-redux";
 
 interface FOTITO {
   foto: ImageSourcePropType;
@@ -14,7 +14,10 @@ interface FOTITO {
     | "descripcion4"
     | "descripcion5"
     | "descripcion6";
-  descripcion: {
+}
+
+interface ESTADO {
+  iconos: {
     descripcion1: string;
     descripcion2: string;
     descripcion3: string;
@@ -24,14 +27,24 @@ interface FOTITO {
   };
 }
 
+interface DESCRIPCION {
+  descripcion1: string;
+  descripcion2: string;
+  descripcion3: string;
+  descripcion4: string;
+  descripcion5: string;
+  descripcion6: string;
+}
+
 const Fotito = ({
   foto,
   styles,
   estiloIcono,
   estiloContainer,
   numero,
-  descripcion,
 }: FOTITO) => {
+  const descripcion: DESCRIPCION = useSelector((state: ESTADO) => state.iconos);
+
   return (
     <View style={estiloContainer}>
       <Image style={estiloIcono} source={foto} />

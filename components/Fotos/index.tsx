@@ -23,8 +23,11 @@ import Precio from "../Precio/Precio";
 import { useSelector } from "react-redux";
 import ModalFoto from "../modals/modalFoto/modalFoto";
 
-interface HOME {
-  estado: {
+interface PRECIO {
+  precio: { precio: string };
+}
+interface ESTADO {
+  fotos: {
     foto1: string;
     foto2: string;
     foto3: string;
@@ -32,24 +35,26 @@ interface HOME {
     foto5: string;
     foto6: string;
   };
-  icono: {
+}
+interface ICONO {
+  iconos: {
     icono1: boolean;
     icono2: boolean;
     icono3: boolean;
     icono4: boolean;
     icono5: boolean;
     icono6: boolean;
-    name: boolean;
   };
 }
-interface STATE {
-  precio: { precio: string };
-}
 
-const Home = ({ estado, icono }: HOME) => {
-  const [iconitosVisible, setIconitosVisible] = useState(false);
-  const [visible, setVisible] = useState(false); // estado para mostrar modal precio
-  const precio = useSelector((state: STATE) => state.precio);
+const Home = () => {
+  const estado = useSelector((state: ESTADO) => state.fotos);
+  const icono = useSelector((state: ICONO) => state.iconos);
+  const precio = useSelector((state: PRECIO) => state.precio);
+
+  const [iconitosVisible, setIconitosVisible] = useState(false); // estado para mostrar u ocultar modal del iconitos
+  const [visible, setVisible] = useState(false); // estado para mostrar u ocultar modal precio
+
   return (
     <SafeAreaView style={styles.containerPadre}>
       <Header estilos={styles.header} />
@@ -67,15 +72,9 @@ const Home = ({ estado, icono }: HOME) => {
       <ModalIconitos
         visible={iconitosVisible}
         setVisible={setIconitosVisible}
-        checked={icono}
       />
 
-      <View          //aaaaaaaqui
-        style={{
-          flexDirection: "row",
-          justifyContent: "center",
-        }}
-      >
+      <View style={{ flexDirection: "row", justifyContent: "center" }}>
         {estado.foto1 ? ( // si hay una foto cargada renderiza la foto, sino el boton para cargar una
           <TouchableImagen
             estilo={styles.container1}
@@ -165,7 +164,7 @@ const Home = ({ estado, icono }: HOME) => {
         ) : null}
       </TouchableOpacity>
 
-      <View    // aaaaaaaaaaaaqui
+      <View // aaaaaaaaaaaaqui
         style={{
           flexDirection: "row",
           height: "20%",

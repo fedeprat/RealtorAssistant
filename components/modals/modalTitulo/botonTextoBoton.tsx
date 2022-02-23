@@ -16,7 +16,7 @@ const BotonTextoBoton = ({
   titleBotonMenos,
   titleBotonMas,
 }: INTERFACE) => {
-   let timer: NodeJS.Timeout;
+  let timer: NodeJS.Timeout;
 
   function addTimer(action: () => void) {
     action();
@@ -34,6 +34,7 @@ const BotonTextoBoton = ({
     <View style={styles.viewContainer}>
       <View style={{ width: "15%", backgroundColor: "red" }}>
         <Button
+          onPress={() => {}}
           onPressIn={() => addTimer(accionMenos)}
           onPressOut={eraseTimer}
           title={titleBotonMenos}
@@ -42,6 +43,7 @@ const BotonTextoBoton = ({
       <Text style={{ margin: 3, fontSize: 20 }}>{texto}</Text>
       <View style={{ width: "15%" }}>
         <Button
+          onPress={() => {}}
           onPressIn={() => addTimer(accionMas)}
           onPressOut={eraseTimer}
           title={titleBotonMas}

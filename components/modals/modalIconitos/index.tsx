@@ -1,19 +1,10 @@
-import { ScrollView, Modal, View } from "react-native";
+import { ScrollView, Modal, View, KeyboardAvoidingView } from "react-native";
 import { styles } from "./modalIconitos.styles";
 import Checkboxito from "./checkBox";
 
 interface ICONITOS {
   visible: boolean;
   setVisible: (hola: boolean) => void;
-  checked: {
-    name: boolean;
-    icono1: boolean;
-    icono2: boolean;
-    icono3: boolean;
-    icono4: boolean;
-    icono5: boolean;
-    icono6: boolean;
-  };
 }
 
 const ModalIconitos = ({ visible, setVisible }: ICONITOS) => {
@@ -25,7 +16,7 @@ const ModalIconitos = ({ visible, setVisible }: ICONITOS) => {
       transparent={true}
       statusBarTranslucent={true}
     >
-      <View style={styles.viewBackground}>
+      <KeyboardAvoidingView behavior="height" style={styles.viewBackground}>
         <ScrollView style={styles.textModal} contentOffset={{ x: 20, y: -20 }}>
           <Checkboxito
             name={"icono1"}
@@ -64,7 +55,7 @@ const ModalIconitos = ({ visible, setVisible }: ICONITOS) => {
             cual={'descripcion6'}
           />
         </ScrollView>
-      </View>
+      </KeyboardAvoidingView>
     </Modal>
   );
 };

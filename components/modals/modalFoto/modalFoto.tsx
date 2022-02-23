@@ -1,4 +1,4 @@
-import { Modal, View } from "react-native";
+import { KeyboardAvoidingView, Modal, View } from "react-native";
 import { styles } from "./modalFoto.styles";
 import { Button, Input } from "react-native-elements";
 import {cambiarPrecio} from '../../../redux/actions'
@@ -20,7 +20,7 @@ const ModalFoto = ({ visibleFoto, setVisibleFoto, precio }: ModalFoto) => {
       transparent={true}
       statusBarTranslucent={true}
     >
-      <View style={styles.viewBackground}>
+      <KeyboardAvoidingView behavior="height" style={styles.viewBackground}>
         <View style={styles.container}>
           <View
             style={{
@@ -48,7 +48,7 @@ const ModalFoto = ({ visibleFoto, setVisibleFoto, precio }: ModalFoto) => {
             />
           </View>
         </View>
-      </View>
+      </KeyboardAvoidingView>
     </Modal>
   );
 };
