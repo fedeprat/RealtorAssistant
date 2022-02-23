@@ -18,7 +18,7 @@ const valores = {
   valoresGenerales: {
     borde: "rgb(230, 230, 230)", // color del borde de las fotos
     curvatura: 10, // border radius de las fotos
-    resizeMode: "cover",
+    resizeMode: "contain",
   },
 };
 

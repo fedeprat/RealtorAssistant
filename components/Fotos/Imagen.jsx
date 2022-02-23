@@ -1,38 +1,32 @@
-import React, { SetStateAction, useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import { TouchableOpacity, Image } from "react-native";
 import { addImage } from "../../redux/actions";
 import { styles } from "./home.styles";
 import * as ImagePicker from "expo-image-picker";
 import { connect } from "react-redux";
+import { Dimensions } from "react-native";
 
-interface IMAGEN {
-  estado: string;
-  estilo: {};
-  name: string;
-  addImage: (name: string, data: string) => {}
-}
-
-interface GALLERYSTATUS {
-  galleryStatus: SetStateAction<null>;
-}
-
-const Imagen = ({ estado, estilo, name, addImage }: IMAGEN) => {
+const Imagen = ({ estado, estilo, name, addImage }) => {
   const [hasPermission, setHaspermission] = useState(null);
+  const {height, width} = Dimensions.get('screen')
 
   useEffect(() => {
     (async () => {
-      const galleryStatus: GALLERYSTATUS =
+      const galleryStatus =
         await ImagePicker.requestMediaLibraryPermissionsAsync();
       setHaspermission(galleryStatus.status === "granted");
     })();
   }, []);
 
-  const pickImage = async (e: { preventDefault: () => void }, hola: string) => {
+  const pickImage = async (e, hola) => {
     e.preventDefault();
     let result = await ImagePicker.launchImageLibraryAsync({
       mediaTypes: ImagePicker.MediaTypeOptions.Images,
       allowsEditing: true,
-     //aspect: [16, 9],
+      aspect:
+      (name === "foto3") | (name === "foto4")
+        ? [width * 0.35, height * 0.12]
+        : [width * 0.49, width * 0.5 * 0.77],
       allowsMultipleSelection: false,
     });
     if (!result.cancelled) {

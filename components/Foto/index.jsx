@@ -1,10 +1,12 @@
-import { View, Button, Image } from "react-native";
+import { View, Button } from "react-native";
 import * as ImagePicker from "expo-image-picker";
 import { useEffect, useState } from "react";
 import { connect } from "react-redux";
 import { addImage } from "../../redux/actions";
+import { Dimensions } from "react-native";
 
 const Foto = ({ estilos, name, addImage }) => {
+  const { width, height } = Dimensions.get("screen");
   const [hasPermission, setHaspermission] = useState(null);
 
   useEffect(() => {
@@ -16,18 +18,21 @@ const Foto = ({ estilos, name, addImage }) => {
   }, []);
 
   const pickImage = async (e, hola) => {
-    e.preventDefault()
+    e.preventDefault();
     let result = await ImagePicker.launchImageLibraryAsync({
       mediaTypes: ImagePicker.MediaTypeOptions.Images,
       allowsEditing: true,
-      //aspect: [16, 9],
-      allowsMultipleSelection: false
+      aspect:
+        (name === "foto3") | (name === "foto4")
+          ? [width * 0.35, height * 0.12]
+          : [width * 0.49, width * 0.5 * 0.77],
+      allowsMultipleSelection: false,
     });
     if (!result.cancelled) {
       addImage(result.uri, hola);
     }
     if (hasPermission === false) {
-      return alert('Permiso denegado.');
+      return alert("Permiso denegado.");
     }
     return;
   };
