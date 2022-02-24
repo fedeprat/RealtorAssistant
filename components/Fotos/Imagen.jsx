@@ -7,16 +7,8 @@ import { connect } from "react-redux";
 import { Dimensions } from "react-native";
 
 const Imagen = ({ estado, estilo, name, addImage }) => {
-  const [hasPermission, setHaspermission] = useState(null);
+  const [hasPermission, setHaspermission] = useState(true);
   const {height, width} = Dimensions.get('screen')
-
-  useEffect(() => {
-    (async () => {
-      const galleryStatus =
-        await ImagePicker.requestMediaLibraryPermissionsAsync();
-      setHaspermission(galleryStatus.status === "granted");
-    })();
-  }, []);
 
   const pickImage = async (e, hola) => {
     e.preventDefault();

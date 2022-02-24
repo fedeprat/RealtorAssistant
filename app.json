@@ -4,11 +4,11 @@
     "slug": "RealtorAssistant",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/icon.png",
+    "icon": "./assets/RealtorAssistantIcon.png",
     "splash": {
-      "image": "./assets/icon.png",
+      "image": "./assets/realtornuevo.png",
       "resizeMode": "contain",
-      "backgroundColor": "#ffffff"
+      "backgroundColor": "#ACACC5"
     },
     "updates": {
       "fallbackToCacheTimeout": 0
@@ -18,8 +18,8 @@
     ],
     "android": {
       "adaptiveIcon": {
-        "foregroundImage": "./assets/icon.png",
-        "backgroundColor": "#FFFFFF"
+        "foregroundImage": "./assets/realtornuevo.png",
+        "backgroundColor": "#ACACC5"
       },
       "package": "io.expo.client"
     },

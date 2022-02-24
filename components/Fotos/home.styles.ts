@@ -1,6 +1,5 @@
 import { StyleSheet } from "react-native";
 import { Dimensions } from "react-native";
-import { estilosIcono } from "../iconos/iconos.styles";
 
 const { width, height } = Dimensions.get("screen");
 // -------- valores importantes --------------- //
@@ -18,7 +17,7 @@ const valores = {
   valoresGenerales: {
     borde: "rgb(230, 230, 230)", // color del borde de las fotos
     curvatura: 10, // border radius de las fotos
-    resizeMode: "contain",
+    resizeMode: "cover",
   },
 };
 
