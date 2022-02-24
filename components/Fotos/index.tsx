@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { View, TouchableOpacity, Image, SafeAreaView } from "react-native";
+import { View, TouchableOpacity, SafeAreaView } from "react-native";
 import { styles } from "./home.styles";
 import bañera from "../iconos/bañera.png";
 import superficieTotal from "../iconos/casa-terreno.png";

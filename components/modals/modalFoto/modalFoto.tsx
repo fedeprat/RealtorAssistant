@@ -45,6 +45,7 @@ const ModalFoto = ({ visibleFoto, setVisibleFoto, precio }: ModalFoto) => {
                 marginHorizontal: 50,
                 marginVertical: 10,
               }}
+              onPress={() => setVisibleFoto(false)}
             />
           </View>
         </View>
