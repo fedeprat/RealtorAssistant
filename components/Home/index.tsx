@@ -10,18 +10,18 @@ const Home = ({ navigation }: HOME) => {
     <>
       <PricingCard
         color={"rgb(20, 50, 100)"}
-        title="Plantilla 1080x1920"
+        title="Template 1080x1920"
         price=""
-        info={["formato de historias de instagram", "y estados de whatsapp"]}
-        button={{ title: "IR"}}
+        info={["Instagram Stories format", "and Whatsapp Status"]}
+        button={{ title: "Go"}}
         onButtonPress={() => navigation.navigate("PlantillaInsta")}
       />
       <PricingCard
         color={"rgb(20, 50, 100)"}
-        title="Guia de uso"
+        title="Tutorial (Currently developing.)"
         price=""
         
-        button={{ title: "IR"}}
+        button={{ title: "Go"}}
         onButtonPress={() => {}}
       />
     </>
