@@ -93,7 +93,7 @@ const ModalTitulo = ({
             <BotonTextoBoton
               accionMas={() => desplazar(ACTIONS.DESPLAZAR_DERECHA)}
               accionMenos={() => desplazar(ACTIONS.DESPLAZAR_IZQUIERDA)}
-              texto={"Move title in X axis"}
+              texto={"Move title along X axis"}
               titleBotonMas={'- >'}
               titleBotonMenos={"< -"}
             />
@@ -107,7 +107,7 @@ const ModalTitulo = ({
               accionMenos={() =>
                 desplazarTituloVertical(ACTIONS.DESPLAZAR_TITULO_ARRIBA)
               }
-              texto={"Move title in Y axis"}
+              texto={"Move title along Y axis"}
               titleBotonMas={"+"}
               titleBotonMenos={"-"}
             />
@@ -142,7 +142,7 @@ const ModalTitulo = ({
 
             <BotonTextoBoton accionMas={() => {desplazarSubtitle(ACTIONS.DESPLAZAR_DERECHA_SUBTITLE)}}
             accionMenos = {() => desplazarSubtitle(ACTIONS.DESPLAZAR_IZQUIERDA_SUBTITLE)}
-            texto = {'Move subtitle in X axis'}
+            texto = {'Move subtitle along X axis'}
             titleBotonMas = {'- >'}
             titleBotonMenos = {'< -'}
             />
@@ -151,7 +151,7 @@ const ModalTitulo = ({
 
             <BotonTextoBoton accionMas={() => desplazarSubTituloVertical(ACTIONS.DESPLAZAR_SUBTITULO_ABAJO)}
             accionMenos = {() => desplazarSubTituloVertical(ACTIONS.DESPLAZAR_SUBTITULO_ARRIBA)}
-            texto = {'Move subtitle in Y axis'}
+            texto = {'Move subtitle along Y axis'}
             titleBotonMas = {'+'}
             titleBotonMenos = {'-'}
             />
