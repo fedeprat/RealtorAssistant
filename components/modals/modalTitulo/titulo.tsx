@@ -58,7 +58,7 @@ const ModalTitulo = ({
           <View>
             <View style={{ margin: 30 }}>
               <Input
-                placeholder="Titulo"
+                placeholder="Title"
                 style={styles.inputContainer}
                 onChangeText={(text) => addTitle(text)}
               >
@@ -67,7 +67,7 @@ const ModalTitulo = ({
             </View>
             <View style={{ width: "100%", alignItems: "center" }}>
               <Button
-                title="Listo"
+                title="Done"
                 buttonStyle={{
                   backgroundColor: "rgba(78, 116, 289, 1)",
                   borderRadius: 3,
@@ -85,7 +85,7 @@ const ModalTitulo = ({
             <BotonTextoBoton
               accionMas={aumentarFuente}
               accionMenos={disminuirFuente}
-              texto={"Tamaño de la fuente"}
+              texto={"Font size"}
               titleBotonMas={"+"}
               titleBotonMenos={"-"}
             />
@@ -93,7 +93,7 @@ const ModalTitulo = ({
             <BotonTextoBoton
               accionMas={() => desplazar(ACTIONS.DESPLAZAR_DERECHA)}
               accionMenos={() => desplazar(ACTIONS.DESPLAZAR_IZQUIERDA)}
-              texto={"Desplazar titulo"}
+              texto={"Move title in X axis"}
               titleBotonMas={'- >'}
               titleBotonMenos={"< -"}
             />
@@ -107,7 +107,7 @@ const ModalTitulo = ({
               accionMenos={() =>
                 desplazarTituloVertical(ACTIONS.DESPLAZAR_TITULO_ARRIBA)
               }
-              texto={"Desplazar titulo en eje y"}
+              texto={"Move title in Y axis"}
               titleBotonMas={"+"}
               titleBotonMenos={"-"}
             />
@@ -123,7 +123,7 @@ const ModalTitulo = ({
           <View style={{ marginBottom: 30, marginLeft: 20, marginRight: 30 }}>
             <View>
               <Input
-                placeholder="Subtitulo"
+                placeholder="Subtitle"
                 style={styles.inputContainer}
                 onChangeText={(text) => addSubtitle(text)}
               >
@@ -135,14 +135,14 @@ const ModalTitulo = ({
             <BotonTextoBoton
               accionMas={aumentarFuenteSubtitulo}
               accionMenos={disminuirFuenteSubtitulo}
-              texto={"Tamaño de la fuente"}
+              texto={"Font size"}
               titleBotonMas = {'+'}
               titleBotonMenos = {'-'}
             />
 
             <BotonTextoBoton accionMas={() => {desplazarSubtitle(ACTIONS.DESPLAZAR_DERECHA_SUBTITLE)}}
             accionMenos = {() => desplazarSubtitle(ACTIONS.DESPLAZAR_IZQUIERDA_SUBTITLE)}
-            texto = {'Desplazar subtitulo'}
+            texto = {'Move subtitle in X axis'}
             titleBotonMas = {'- >'}
             titleBotonMenos = {'< -'}
             />
@@ -151,7 +151,7 @@ const ModalTitulo = ({
 
             <BotonTextoBoton accionMas={() => desplazarSubTituloVertical(ACTIONS.DESPLAZAR_SUBTITULO_ABAJO)}
             accionMenos = {() => desplazarSubTituloVertical(ACTIONS.DESPLAZAR_SUBTITULO_ARRIBA)}
-            texto = {'Desplazar subtitulo en eje y'}
+            texto = {'Move subtitle in Y axis'}
             titleBotonMas = {'+'}
             titleBotonMenos = {'-'}
             />

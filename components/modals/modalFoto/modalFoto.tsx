@@ -35,7 +35,7 @@ const ModalFoto = ({ visibleFoto, setVisibleFoto, precio }: ModalFoto) => {
           </View>
           <View style={styles.butonContainer}>
             <Button
-              title="Listo"
+              title="Done"
               buttonStyle={{
                 backgroundColor: "rgba(78, 116, 289, 1)",
                 borderRadius: 3,

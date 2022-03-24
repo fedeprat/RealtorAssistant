@@ -76,7 +76,7 @@ const initialState = {
     descripcion6: "6",
   },
   titulo: {
-    titulo: "TITULO",
+    titulo: "TITLE",
     fontSize: 35,
     position: {
       right: 135,
@@ -84,7 +84,7 @@ const initialState = {
     },
   },
   subtitulo: {
-    subtitulo: "SUBTITULO",
+    subtitulo: "SUBTITLE",
     fontSize: 30,
     position: {
       right: 110,

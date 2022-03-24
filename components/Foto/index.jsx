@@ -39,7 +39,7 @@ const Foto = ({ estilos, name, addImage }) => {
   return (
     <View style={estilos}>
       <Button
-        title="Subir Foto"
+        title="Upload picture"
         onPress={(e) => {
           pickImage(e, name);
         }}
