@@ -15,8 +15,11 @@ stories and whatsapp status to advertise the houses. So I thought it would be a 
     - React Native Navigate to navigate between elements and screens <br>
     
    ![overAll](appPictures/overAll.jpg) This is the Home Screen where you can edit everything to your liking <br>
+   <br>
    ![titleModal](appPictures/titleModal.jpg) If you tap the title or subtitle a modal will pop up to offer you different configuration options <br>
+   <br>
    ![houseFeature](appPictures/HouseFeatures.jpg) If you tap on the middle white center a modal will pop up with checkboxes, you can check all the options you
    want to show <br>
+   <br>
    ![Finished](appPictures/Finished.jpg) This is how it looks after you set everything up. It has the 1080x1920 size recommended for instagram stories and Whatsapp Status. <br>
        Ivan Prat is my brother by the way haha
