@@ -45,6 +45,18 @@ export const styles = StyleSheet.create({
     flexDirection: "row",
     justifyContent: "space-around",
   },
+  tap: {
+    width: "100%",
+    height: '10%',
+    borderWidth: 2,
+    borderColor: "white",
+    justifyContent: "center",
+    alignItems: "center",
+  },
+  textTap: {
+    color: "rgb(100,100,100)",
+    fontSize: 15
+  },
   container1: {
     width: valores.fotosEsquina.anchoFoto,
     height: valores.fotosEsquina.altoFoto,

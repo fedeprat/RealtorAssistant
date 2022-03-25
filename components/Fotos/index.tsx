@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { View, TouchableOpacity, SafeAreaView } from "react-native";
+import { View, TouchableOpacity, SafeAreaView, Text } from "react-native";
 import { styles } from "./home.styles";
 import bañera from "../iconos/bañera.png";
 import superficieTotal from "../iconos/casa-terreno.png";
@@ -104,65 +104,76 @@ const Home = () => {
         )}
       </View>
 
-      <TouchableOpacity /* el medio */
-        style={styles.medio}
-        onPress={() => setIconitosVisible(true)} // funcion que activa el modal de los iconos
-      >
-        {icono.icono1 ? ( // si el estado del icono es true renderiza el icono sino queda oculto
-          <Fotito
-            foto={superficieTotal}
-            styles={estilosTexto.texto}
-            estiloIcono={estilosIcono.iconos}
-            estiloContainer={estiloContainer.container}
-            numero={"descripcion1"}
-          />
-        ) : null}
-        {icono.icono2 ? ( // si el estado del icono es true renderiza el icono sino queda oculto
-          <Fotito
-            foto={superficieInterior}
-            styles={estilosTexto.texto}
-            estiloIcono={estilosIcono.iconos}
-            estiloContainer={estiloContainer.container}
-            numero={"descripcion2"}
-          />
-        ) : null}
-        {icono.icono3 ? ( // si el estado del icono es true renderiza el icono sino queda oculto
-          <Fotito
-            foto={bañera}
-            styles={estilosTexto.texto}
-            estiloIcono={estilosIcono.iconos}
-            estiloContainer={estiloContainer.container}
-            numero={"descripcion3"}
-          />
-        ) : null}
-        {icono.icono4 ? ( // si el estado del icono es true renderiza el icono sino queda oculto
-          <Fotito
-            foto={inodoro}
-            styles={estilosTexto.texto}
-            estiloIcono={estilosIcono.iconos}
-            estiloContainer={estiloContainer.container}
-            numero={"descripcion4"}
-          />
-        ) : null}
-        {icono.icono5 ? ( // si el estado del icono es true renderiza el icono sino queda oculto
-          <Fotito
-            foto={dormitorio}
-            styles={estilosTexto.texto}
-            estiloIcono={estilosIcono.iconos}
-            estiloContainer={estiloContainer.container}
-            numero={"descripcion5"}
-          />
-        ) : null}
-        {icono.icono6 ? ( // si el estado del icono es true renderiza el icono sino queda oculto
-          <Fotito
-            foto={garage}
-            styles={estilosTexto.texto}
-            estiloIcono={estilosIcono.iconos}
-            estiloContainer={estiloContainer.container}
-            numero={"descripcion6"}
-          />
-        ) : null}
-      </TouchableOpacity>
+      {icono.icono1 ||
+      icono.icono2 ||
+      icono.icono3 ||
+      icono.icono4 ||
+      icono.icono5 ||
+      icono.icono6 ? (
+        <TouchableOpacity /* el medio */
+          style={styles.medio}
+          onPress={() => setIconitosVisible(true)} // funcion que activa el modal de los iconos
+        >
+          {icono.icono1 ? ( // si el estado del icono es true renderiza el icono sino queda oculto
+            <Fotito
+              foto={superficieTotal}
+              styles={estilosTexto.texto}
+              estiloIcono={estilosIcono.iconos}
+              estiloContainer={estiloContainer.container}
+              numero={"descripcion1"}
+            />
+          ) : null}
+          {icono.icono2 ? ( // si el estado del icono es true renderiza el icono sino queda oculto
+            <Fotito
+              foto={superficieInterior}
+              styles={estilosTexto.texto}
+              estiloIcono={estilosIcono.iconos}
+              estiloContainer={estiloContainer.container}
+              numero={"descripcion2"}
+            />
+          ) : null}
+          {icono.icono3 ? ( // si el estado del icono es true renderiza el icono sino queda oculto
+            <Fotito
+              foto={bañera}
+              styles={estilosTexto.texto}
+              estiloIcono={estilosIcono.iconos}
+              estiloContainer={estiloContainer.container}
+              numero={"descripcion3"}
+            />
+          ) : null}
+          {icono.icono4 ? ( // si el estado del icono es true renderiza el icono sino queda oculto
+            <Fotito
+              foto={inodoro}
+              styles={estilosTexto.texto}
+              estiloIcono={estilosIcono.iconos}
+              estiloContainer={estiloContainer.container}
+              numero={"descripcion4"}
+            />
+          ) : null}
+          {icono.icono5 ? ( // si el estado del icono es true renderiza el icono sino queda oculto
+            <Fotito
+              foto={dormitorio}
+              styles={estilosTexto.texto}
+              estiloIcono={estilosIcono.iconos}
+              estiloContainer={estiloContainer.container}
+              numero={"descripcion5"}
+            />
+          ) : null}
+          {icono.icono6 ? ( // si el estado del icono es true renderiza el icono sino queda oculto
+            <Fotito
+              foto={garage}
+              styles={estilosTexto.texto}
+              estiloIcono={estilosIcono.iconos}
+              estiloContainer={estiloContainer.container}
+              numero={"descripcion6"}
+            />
+          ) : null}
+        </TouchableOpacity>
+      ) : (
+        <TouchableOpacity onPress={() => setIconitosVisible(true)} style={styles.tap}>
+          <Text style={styles.textTap}>Tap to set features up</Text>
+        </TouchableOpacity>
+      )}
 
       <View // aaaaaaaaaaaaqui
         style={{
@@ -199,11 +210,7 @@ const Home = () => {
           <Foto estilos={styles.container6} name={"foto6"} />
         )}
       </View>
-      <Footer
-        estilosPrincipal={styles.footer}
-        estiloIvanLogo={styles.logoIvan}
-        estiloCologo={styles.cologo}
-      />
+      <Footer estilosPrincipal={styles.footer} />
     </SafeAreaView>
   );
 };
