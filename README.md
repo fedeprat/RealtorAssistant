@@ -1,11 +1,13 @@
 # RealtorAssistant
+### LinkedIn: https://www.linkedin.com/in/federico-prat/
 
-This is an app I've made for my brother who is a real state agent. He once said to me he did not have a way to easily make photo compilations to upload to his instagram
+This is an app I've made for my brother who is a real estate agent. He once said to me he did not have a way to easily make photo compilations to upload to his instagram
 stories and whatsapp status to advertise the houses. So I thought it would be a good idea to make an app for that purpose.
 <br>
   ![startingLogo](appPictures/startingPicture.jpg)
 <br>
   I used the following libraries and technologies to develope it: <br>
+    - Expo as the main platform and framework to build it <br>
     - TypeScript <br>
     - ImagePicker to administrate permissions and image upload to the app <br>
     - React Native Elements to get a hand with checkboxes and inputs <br>
@@ -13,6 +15,12 @@ stories and whatsapp status to advertise the houses. So I thought it would be a 
     - React native safe area context to avoid the problematic differences between the top side screen of each device <br> 
     - React redux to manage the global state <br>
     - React Native Navigate to navigate between elements and screens <br>
+    <br>
+    <br>
+    Here you have the Expo QR Code to try the app yourself. <br>
+    ![expoQR](appPictures/ExpoQR.jpg)
+    <br>
+    <br>
     
    ![overAll](appPictures/overAll.jpg) This is the Home Screen where you can edit everything to your liking <br>
    <br>
