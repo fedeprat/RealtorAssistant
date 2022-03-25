@@ -21,37 +21,37 @@ const ModalIconitos = ({ visible, setVisible }: ICONITOS) => {
           <Checkboxito
             name={"icono1"}
             titulo={"covered surface"}
-            placeholder={"m2"}
+            placeholder={"square meters"}
             cual={'descripcion1'}
           />
           <Checkboxito
             name={"icono2"}
             titulo={"total surface"}
-            placeholder={"m2"}
+            placeholder={"square meters"}
             cual={'descripcion2'}
           />
           <Checkboxito
             name={"icono3"}
             titulo={"full bathrooms"}
-            placeholder={"cantidad"}
+            placeholder={"how many"}
             cual={'descripcion3'}
           />
           <Checkboxito
             name={"icono4"}
             titulo={"bathrooms"}
-            placeholder={"cantidad"}
+            placeholder={"how many"}
             cual={'descripcion4'}
           />
           <Checkboxito
             name={"icono5"}
             titulo={"bedrooms"}
-            placeholder={"cantidad"}
+            placeholder={"how many"}
             cual={'descripcion5'}
           />
           <Checkboxito
             name={"icono6"}
             titulo={"garage"}
-            placeholder={"cantidad"}
+            placeholder={"how many"}
             cual={'descripcion6'}
           />
         </ScrollView>
