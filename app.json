@@ -1,7 +1,7 @@
 {
   "expo": {
     "name": "RealtorAssistant",
-    "slug": "RealtorAssistant",
+    "slug": "realtor-assistant",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/RealtorAssistantIcon.png",
