@@ -1,5 +1,5 @@
 # RealtorAssistant
-### LinkedIn: https://www.linkedin.com/in/federico-prat/
+### LinkedIn: https://www.linkedin.com/in/fred-prat/
 
 This is an app I've made for my brother who is a real estate agent. He once said to me he did not have a way to easily make photo compilations to upload to his instagram
 stories and whatsapp status to advertise the houses. So I thought it would be a good idea to make an app for that purpose.
