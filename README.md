@@ -17,7 +17,7 @@ stories and whatsapp status to advertise the houses. So I thought it would be a 
     - React Native Navigate to navigate between elements and screens <br>
     <br>
     <br>
-    Here you have the Expo QR Code to try the app yourself. <br>
+    Here you have the Expo QR Code to try the app yourself. You have to download ExpoGo app and scan that code to open my app ready to be used<br>
     ![expoQR](appPictures/ExpoQR.jpg)
     <br>
     <br>
