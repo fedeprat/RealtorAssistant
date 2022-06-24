@@ -6,7 +6,7 @@ stories and whatsapp status to advertise the houses. So I thought it would be a 
 <br>
   ![startingLogo](appPictures/startingPicture.jpg)
 <br>
-  I used the following libraries and technologies to develope it: <br>
+  I used the following libraries and technologies to develop it: <br>
     - Expo as the main platform and framework to build it <br>
     - TypeScript <br>
     - ImagePicker to administrate permissions and image upload to the app <br>
